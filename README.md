@@ -177,6 +177,7 @@ Function check_paired_silver:
 			Interrupt the loop
 		ENDIF
 		Add one to j
+	END WHILE
 	RETURN paired
 ```
 
@@ -195,6 +196,7 @@ Function check_paired_gold:
 			Interrupt the loop
 		ENDIF
 		Add one to j
+	END WHILE
 	RETURN paired
 ```
 
@@ -268,6 +270,7 @@ Function main:
 				Assign false to gold_reach
 			ENDIF
 		ENDIF
+	END WHILE
 ```		
 
 ### Possible improvements
