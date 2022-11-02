@@ -1,7 +1,5 @@
-Python Robotics Simulator
+First assignment
 ================================
-
-This is a simple, portable robot simulator developed by [Student Robotics](https://studentrobotics.org).
 
 Installing and running
 ----------------------
@@ -16,16 +14,16 @@ By the command line, you can run it with:
 $ python2 run.py assignment.py
 ```
 
-# Assignment
+Description
 -----------------------------
 
 The purpose of the script is to pair each silver token with a different golden. Firstly the robot has to find an unpaired silver token, grab it then find an unperaid gold token and, when it closes to it, release it and repeat the actions for every silver token. The important thing is that each silver has to be paired with only one gold token, there is no way for having two silvers or more paired with one gold. The final result is something like this
 
-<img src="./rt_firstassignment/Myimmage.jpg" alt="robot" width=400>
+<img src="./rt_firstassignment/image_rsass.png" alt="blocks gold and silver paired" width=400>
 
 ## Pseudocode
 
-For achive what I have written before, I have structured the code by using many functions for make it more modular and plainer. There are nine functions plus the main, that are explained by using pseudocode.
+For achiving what I have written before, I have structured the code by using many functions for make it more modular and plainer. There are nine functions plus the main, that are explained by using pseudocode.
 
 * **Drive**
 
@@ -273,11 +271,12 @@ Function main:
 	END WHILE
 ```		
 
-### Possible improvements
+Possible improvements
+-------------------------------------
 
 Although there are no specific constraints of which silver or gold token has to be found by robot ( i.g.: the closest or the farest), my solution implements that every time it finds the closest silver. but not the golden. So one possible improvement is to accomplish not only the former, but also the latter. For doing that, when the robot grabs the silver, it has to rotate until find the nearest golden. 
 
-Another possible improvement is to make the stop condition of the loop more "general"; in fact the while loop stops when the robot pairs the sixth silver block with the sixth gold one, but what happens if one more pair is added? The robot doesn't recognize the new blocks unless I change the value of variable `count_pair` in the function `paired_tokens`. 
+Another possible improvement is to make the stop condition of the loop more "general"; in fact the while loop stops when the robot pairs the sixth silver block with the sixth gold one, but what happens if one more pair is added? The robot doesn't recognize the new blocks unless I change the value of variable **count_pair** in the function `paired_tokens`. 
 
 
 	
