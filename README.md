@@ -25,6 +25,15 @@ The purpose of the script is to pair each silver token with a different golden. 
 
 For achiving what I have written before, I have structured the code by using many functions for make it more modular and plainer. There are nine functions plus the main, that are explained by using pseudocode.
 
+* **Global variables**
+
+```
+Here I define the global variables of the script:
+SET var a_th to 2.0
+SET var d_th to 0.4
+```
+
+
 * **Drive**
 
 ```
