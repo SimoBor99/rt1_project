@@ -6,7 +6,7 @@ Installing and running
 
 The simulator requires a Python 2.7 installation, the [pygame](http://pygame.org/) library, [PyPyBox2D](https://pypi.python.org/pypi/pypybox2d/2.1-r331), and [PyYAML](https://pypi.python.org/pypi/PyYAML/).
 
-Once the dependencies are installed, to run the script `assignment.py` in the simulator, use `run.py`, passing it the file name. You can find both files into [rt_firstassignment folder](https://github.com/SimoBor99/rt1_project/tree/main/rt_firstassignment).
+Once the dependencies are installed, to run the script `assignment.py` in the simulator, use `run.py`, passing it the file name. You can find both files into `rt_firstassignment folder`.
 By the command line, you can run it with:
 
 
@@ -17,7 +17,7 @@ $ python2 run.py assignment.py
 Description
 -----------------------------
 
-The purpose of the script is to pair each silver token with a different golden. Firstly the robot has to find an unpaired silver token, grab it then find an unperaid gold token and, when it closes to it, release it and repeat the actions for every silver token. The important thing is that each silver has to be paired with only one gold token, there is no way for having two silvers or more paired with one gold. The final result is something like this
+The purpose of the program is to pair each silver token with a different golden. Firstly the robot has to find an unpaired silver token, grab it then find an unperaid golden and, when it closes to it, release it and repeat the actions until that it paired everyone. The important thing is that each silver has to be paired with only one gold, there is no way for having two silvers or more paired with one gold. The final result is something like this
 
 <img src="./rt_firstassignment/image_rsass.png" alt="blocks gold and silver paired" width=400>
 
@@ -28,11 +28,10 @@ For achiving what I have written before, I have structured the code by using man
 * **Global variables**
 
 ```
-Here I define the global variables of the script:
+Here I define the global threshold variables of the program:
 SET var a_th to 2.0
 SET var d_th to 0.4
 ```
-
 
 * **Drive**
 
@@ -283,9 +282,9 @@ Function main:
 Possible improvements
 -------------------------------------
 
-Although there are no specific constraints of which silver or gold token has to be found by robot ( i.g.: the closest or the farest), my solution implements that every time it finds the closest silver. but not the golden. So one possible improvement is to accomplish not only the former, but also the latter. For doing that, when the robot grabs the silver, it has to rotate until find the nearest golden. 
+Although there are no constraints of which silver or gold token has to be found by robot ( i.g.: the closest or the farest), my solution implements that every time it finds, locally but not absolutely, the closest silver. For finding the closest in absolutely way, every time the robot firstly has to rotate for seeing all silvers, calculating distances and compare each other to find the absolute minimum. The same thing can be done for gold tokens.
 
-Another possible improvement is to make the stop condition of the loop more "general"; in fact the while loop stops when the robot pairs the sixth silver block with the sixth gold one, but what happens if one more pair is added? The robot doesn't recognize the new blocks unless I change the value of variable **count_pair** in the function `paired_tokens`. 
+Another possible improvement is to make the stop condition of the loop more "general"; in fact the while loop stops when the robot pairs the sixth silver block with the sixth gold one, but what happens if one more pair is added? The robot doesn't recognize the new blocks unless I change the value of variable **count_pair** in the function `paired_tokens`. To overcome that limit, it is possible to use a different data structure for paired silver and gold tokens, that has no fixed lenght; i.g: **lists**.
 
 
 	
