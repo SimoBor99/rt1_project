@@ -6,12 +6,12 @@ Installing and running
 
 The simulator requires a Python 2.7 installation, the [pygame](http://pygame.org/) library, [PyPyBox2D](https://pypi.python.org/pypi/pypybox2d/2.1-r331), and [PyYAML](https://pypi.python.org/pypi/PyYAML/).
 
-Once the dependencies are installed, to run the script `assignment.py` in the simulator, use `run.py`, passing it the file name. You can find both files into `rt_firstassignment folder`.
+Once the dependencies are installed, to run the script `assignment.py` in the simulator, use `run.py`, passing it the file name. You can find both files into `rt_firstassignment` folder.
 By the command line, you can run it with:
 
 
 ```bash
-$ python2 run.py assignment.py
+$ python run.py assignment.py
 ```
 
 Description
@@ -24,14 +24,6 @@ The purpose of the program is to pair each silver token with a different golden.
 ## Pseudocode
 
 For achiving what I have written before, I have structured the code by using many functions for make it more modular and plainer. There are nine functions plus the main, that are explained by using pseudocode.
-
-* **Global variables**
-
-```
-Here I define the global threshold variables of the program:
-SET var a_th to 2.0
-SET var d_th to 0.4
-```
 
 * **Drive**
 
@@ -277,7 +269,15 @@ Function main:
 			ENDIF
 		ENDIF
 	END WHILE
-```		
+```
+
+**Global variables**
+
+```
+Here I define the global threshold variables of the program:
+SET var a_th to 2.0
+SET var d_th to 0.4
+```
 
 Possible improvements
 -------------------------------------
