@@ -1,6 +1,8 @@
 First assignment
 ================================
 
+This is a simple, portable robot simulator developed by [Student Robotics](https://studentrobotics.org).
+
 Installing and running
 ----------------------
 
@@ -23,7 +25,7 @@ The purpose of the program is to pair each silver token with a different golden.
 
 ## Pseudocode
 
-For achiving what I have written before, I have structured the code by using many functions for make it more modular and plainer. There are nine functions plus the main, that are explained by using pseudocode.
+For achiving what I have written before, I have structured the code by using many functions for make it more modular and plainer. There are ten functions ( including the main), that are explained by using pseudocode.
 
 * **Drive**
 
