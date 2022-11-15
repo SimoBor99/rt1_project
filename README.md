@@ -284,7 +284,7 @@ Possible improvements
 
 Although there are no constraints of which silver or gold token has to be found by robot ( i.g.: the closest or the farest), my solution implements that every time it finds, locally but not absolutely, the closest silver. For finding the closest in absolutely way, every time the robot firstly has to rotate for seeing all silvers, calculating distances and compare each other to find the absolute minimum. The same thing can be done for gold tokens.
 
-Another possible improvement is to make the stop condition of the loop more "general"; in fact the while loop stops when the robot pairs the sixth silver block with the sixth gold one, but what happens if one more pair is added? The robot doesn't recognize the new blocks unless I change the value of variable **count_pair** in the function `paired_tokens`. To overcome that limit, it is possible to use a different data structure for paired silver and gold tokens, that has no fixed lenght; i.g: **lists**.
+Another possible improvement is to make the stop condition of the loop more "general"; in fact the while loop stops when the robot pairs the sixth silver block with the sixth gold one, but what happens if one more pair is added? The robot doesn't recognize the new blocks unless I change the value of variable **count_pair** in the function `paired_tokens`. For overcoming that limit, it is possible to use a different data structure for paired silver and gold tokens, that has no fixed lenght; i.g: **lists**.
 
 
 	
