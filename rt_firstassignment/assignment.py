@@ -9,6 +9,8 @@ a_th = 2.0
 d_th = 0.4
 """ float: Threshold for the control of the orientation"""
 
+numb_token=6
+
 R = Robot()
 
 def drive(speed, seconds):
@@ -150,7 +152,7 @@ def check_paired_silver( parray_silver, silver_number):
 	"""
 	paired=False
 	j=0
-	while j<6:
+	while j<numb_token:
 		if parray_silver[j]==silver_number: # if the current silver token has been already paired, the robot turns for finding a silver unpaired
 			print("Token paired silver found")
 			turn(10,2)
@@ -172,7 +174,7 @@ def check_paired_gold( parray_gold, gold_number):
 	"""
 	paired=False
 	j=0
-	while j<6:
+	while j<numb_token:
 		if parray_gold[j]==gold_number: # if the current gold token has been already paired, the robot turns for finding a gold unpaired
 			print("Token paired gold found:")
 			turn(10,2)
@@ -197,7 +199,7 @@ def paired_tokens( parray_silver, silver_number, parray_gold, gold_number, count
 	parray_silver[count_pair]=silver_number
 	parray_gold[count_pair]=gold_number
 	count_pair+=1
-	if count_pair==6: # if every silver token has been paired, the program ends
+	if count_pair==numb_token: # if every silver token has been paired, the program ends
 		print("Finish, every silver token is paired")
 		drive(-20,1)
 		exit()
@@ -208,8 +210,8 @@ def paired_tokens( parray_silver, silver_number, parray_gold, gold_number, count
 	return count_pair
 	
 def main():
-	parray_silver=[0]*6 # this array collects the code number of paired silver tokens
-	parray_gold=[0]*6 # this array collects the code number of paired gold tokens
+	parray_silver=[0]*numb_token # this array collects the code number of paired silver tokens
+	parray_gold=[0]*numb_token # this array collects the code number of paired gold tokens
 	count_pair=0 # index for the access of previous arrays, and count the paired tokens
 	silver_avaible=True # it is true if any silver token is avaible, otherwise it is false
 	silver_taken=False # it is true if the silver token is grabbed, otherwise it is false
